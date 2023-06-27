@@ -16,7 +16,7 @@ spec:
         spec:
            containers:
             - name: tomcat
-              image: kiran5108/tomcat:8d209f10db70499b201a2524a1a41398b415b9b0
+              image: kiran5108/tomcat:4be8c8c9ebfc64a32b86d75860cb3b9cfa6ec7be
               ports:
               - containerPort: 8080                 
 ---
