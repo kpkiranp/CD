@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+     name: mavenproject
+     labels: 
+        app: webapp 
+spec:
+     replicas: 1
+     selector:
+        matchLabels:
+           app: webapp
+     template:
+        metadata:
+           labels:
+              app: webapp
+        spec:
+           containers:
+            - name: tomcat
+              image: kiran5108/tomcat:c78fc5057c5a4d0c98a5640da726b997cd10b31e
+              ports:
+              - containerPort: 8080                 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+    
+spec:
+  type: NodePort
+  selector: 
+      app: webapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 31080
