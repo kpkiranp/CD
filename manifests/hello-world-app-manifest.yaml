@@ -16,7 +16,7 @@ spec:
         spec:
            containers:
             - name: tomcat
-              image: kiran5108/tomcat:7690bf43cad3b5eddc18d31f6e9a9382fd14d699
+              image: kiran5108/tomcat:3b44d11ff20a0f7b474c13e835a6ce863e3b1c13
               ports:
               - containerPort: 8080                 
 ---
@@ -35,7 +35,7 @@ spec:
       targetPort: 8080
       nodePort: 31080
 ---
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: WebappHPA
