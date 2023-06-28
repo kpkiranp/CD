@@ -16,7 +16,7 @@ spec:
         spec:
            containers:
             - name: tomcat
-              image: kiran5108/tomcat:2e4a6b9b82bd005aaf1d4dde3ad77a57c6741b43
+              image: kiran5108/tomcat:0b61cd55513df9d6437b0a8179926c47d88f3738
               ports:
               - containerPort: 8080
               resources:
@@ -57,4 +57,4 @@ spec:
         name: cpu
         target:
           type: Utilization
-          averageUtilization: 20   
+          averageUtilization: 5   
